@@ -311,5 +311,11 @@ namespace MyHomeWork
             this.dataGridView1.DataSource = student.ToList();
             this.dataGridView2.DataSource = students_scores.Where(i => (i.Math<60)).ToList();
         }
+
+        #region 0727新題目
+        //new {.....  Min=33, Max=34.}
+        // 找出 'aaa', 'bbb' 'ccc' 學員 國文數學兩科 科目成績  |		
+        //個人 所有科的  sum, min, max, avg
+        #endregion
     }
 }
