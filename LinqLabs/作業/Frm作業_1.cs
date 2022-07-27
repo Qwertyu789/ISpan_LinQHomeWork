@@ -276,7 +276,7 @@ namespace MyHomeWork
                           select i;
 
             this.dataGridView1.DataSource = student.ToList();
-            this.dataGridView2.DataSource = students_scores.Where(i => (i.Name.Equals("aaa")||i.Name.Equals("bbb")||i.Name.Equals("ccc"))).ToList();
+            this.dataGridView2.DataSource = students_scores.Where(i => (i.Name == "aaa" || i.Name == "bbb" || i.Name == "ccc")).ToList();
         }
 
         private void brnFindbbb_Click(object sender, EventArgs e)
@@ -287,6 +287,7 @@ namespace MyHomeWork
                           select i;
 
             this.dataGridView1.DataSource = student.ToList();
+            this.dataGridView2.DataSource = students_scores.Where(i => (i.Name == "bbb")).ToList();
         }
 
         private void btnNobbb_Click(object sender, EventArgs e)
@@ -297,6 +298,7 @@ namespace MyHomeWork
                           select i;
 
             this.dataGridView1.DataSource = student.ToList();
+            this.dataGridView2.DataSource = students_scores.Where(i => (i.Name != "bbb")).ToList();
         }
 
         private void btnMathnopass_Click(object sender, EventArgs e)
@@ -307,6 +309,7 @@ namespace MyHomeWork
                           select i;
 
             this.dataGridView1.DataSource = student.ToList();
+            this.dataGridView2.DataSource = students_scores.Where(i => (i.Math<60)).ToList();
         }
     }
 }
