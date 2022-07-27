@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03C24A6A-32D9-41E1-B469-80BDFD85D5D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinqLabs</RootNamespace>
+    <AssemblyName>LinqLabs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1. FrmHelloLinq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. FrmHelloLinq.Designer.cs">
+      <DependentUpon>1. FrmHelloLinq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2. FrmLangForLINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2. FrmLangForLINQ.Designer.cs">
+      <DependentUpon>2. FrmLangForLINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4. FrmLINQ_To_XXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4. FrmLINQ_To_XXX.Designer.cs">
+      <DependentUpon>4. FrmLINQ_To_XXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3. FrmLINQ架構介紹_InsideLINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3. FrmLINQ架構介紹_InsideLINQ.Designer.cs">
+      <DependentUpon>3. FrmLINQ架構介紹_InsideLINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5. FrmLinq_To_Entity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5. FrmLinq_To_Entity.Designer.cs">
+      <DependentUpon>5. FrmLinq_To_Entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="作業\Frm作業_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作業\Frm作業_1.designer.cs">
+      <DependentUpon>Frm作業_1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1. FrmHelloLinq.resx">
+      <DependentUpon>1. FrmHelloLinq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. FrmLangForLINQ.resx">
+      <DependentUpon>2. FrmLangForLINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. FrmLINQ_To_XXX.resx">
+      <DependentUpon>4. FrmLINQ_To_XXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. FrmLINQ架構介紹_InsideLINQ.resx">
+      <DependentUpon>3. FrmLINQ架構介紹_InsideLINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. FrmLinq_To_Entity.resx">
+      <DependentUpon>5. FrmLinq_To_Entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="作業\Frm作業_1.resx">
+      <DependentUpon>Frm作業_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NWDataSet.xsc">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NWDataSet.xss">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
