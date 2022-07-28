@@ -1920,11 +1920,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipName {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipNameColumn]));
+                    if (this.IsShipNameNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipName\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipNameColumn]));
                     }
                 }
                 set {
@@ -1936,11 +1936,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipAddress {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipAddressColumn]));
+                    if (this.IsShipAddressNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipAddress\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipAddressColumn]));
                     }
                 }
                 set {
@@ -1952,11 +1952,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipCity {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipCityColumn]));
+                    if (this.IsShipCityNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipCity\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipCityColumn]));
                     }
                 }
                 set {
@@ -1968,11 +1968,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipRegion {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipRegionColumn]));
+                    if (this.IsShipRegionNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipRegion\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipRegionColumn]));
                     }
                 }
                 set {
@@ -1984,11 +1984,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipPostalCode {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipPostalCodeColumn]));
+                    if (this.IsShipPostalCodeNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipPostalCode\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipPostalCodeColumn]));
                     }
                 }
                 set {
@@ -2000,11 +2000,11 @@ namespace LinqLabs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ShipCountry {
                 get {
-                    try {
-                        return ((string)(this[this.tableOrders.ShipCountryColumn]));
+                    if (this.IsShipCountryNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Orders\' 中資料行 \'ShipCountry\' 的值是 DBNull。", e);
+                    else {
+                        return ((string)(this[this.tableOrders.ShipCountryColumn]));
                     }
                 }
                 set {
@@ -3195,10 +3195,10 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
                 "ty)) AND ((@IsNull_ShipRegion = 1 AND [ShipRegion] IS NULL) OR ([ShipRegion] = @" +
                 "Original_ShipRegion)) AND ((@IsNull_ShipPostalCode = 1 AND [ShipPostalCode] IS N" +
                 "ULL) OR ([ShipPostalCode] = @Original_ShipPostalCode)) AND ((@IsNull_ShipCountry" +
-                " = 1 AND [ShipCountry] IS NULL) OR ([ShipCountry] = @Original_ShipCountry)));\r\nS" +
-                "ELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Shi" +
-                "pVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, Ship" +
-                "Country FROM Orders WHERE (OrderID = @OrderID)";
+                " = 1 AND [ShipCountry] IS NULL) OR ([ShipCountry] = @Original_ShipCountry)));\nSE" +
+                "LECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Ship" +
+                "Via, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipC" +
+                "ountry FROM Orders WHERE (OrderID = @OrderID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustomerID", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustomerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

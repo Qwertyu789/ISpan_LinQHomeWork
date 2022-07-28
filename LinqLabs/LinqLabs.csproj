@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="作業\Frm作業_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作業\Frm作業_2.Designer.cs">
+      <DependentUpon>Frm作業_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="作業\Frm作業_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作業\Frm作業_3.Designer.cs">
+      <DependentUpon>Frm作業_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +89,24 @@
     <EmbeddedResource Include="作業\Frm作業_1.resx">
       <DependentUpon>Frm作業_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="作業\Frm作業_2.resx">
+      <DependentUpon>Frm作業_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="作業\Frm作業_3.resx">
+      <DependentUpon>Frm作業_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="AWDataSet.xsc">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AWDataSet.xss">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
     <None Include="NWDataSet.xsc">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
     </None>

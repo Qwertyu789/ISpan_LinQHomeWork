@@ -37,8 +37,14 @@ namespace MyHomeWork
             this.lblMaster = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnMathnopass = new System.Windows.Forms.Button();
+            this.btnNobbb = new System.Windows.Forms.Button();
+            this.brnFindbbb = new System.Windows.Forms.Button();
+            this.btnLast2 = new System.Windows.Forms.Button();
+            this.btnFindStudent = new System.Windows.Forms.Button();
+            this.btnFront3 = new System.Windows.Forms.Button();
+            this.btnHowmany = new System.Windows.Forms.Button();
             this.btnSearchStudent = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,13 +66,7 @@ namespace MyHomeWork
             this.tableAdapterManager1 = new LinqLabs.NWDataSetTableAdapters.TableAdapterManager();
             this.order_DetailsTableAdapter1 = new LinqLabs.NWDataSetTableAdapters.Order_DetailsTableAdapter();
             this.productsTableAdapter1 = new LinqLabs.NWDataSetTableAdapters.ProductsTableAdapter();
-            this.btnHowmany = new System.Windows.Forms.Button();
-            this.btnFront3 = new System.Windows.Forms.Button();
-            this.btnLast2 = new System.Windows.Forms.Button();
-            this.btnFindStudent = new System.Windows.Forms.Button();
-            this.brnFindbbb = new System.Windows.Forms.Button();
-            this.btnNobbb = new System.Windows.Forms.Button();
-            this.btnMathnopass = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -195,6 +195,7 @@ namespace MyHomeWork
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button37);
             this.splitContainer1.Panel1.Controls.Add(this.btnMathnopass);
             this.splitContainer1.Panel1.Controls.Add(this.btnNobbb);
             this.splitContainer1.Panel1.Controls.Add(this.brnFindbbb);
@@ -203,7 +204,6 @@ namespace MyHomeWork
             this.splitContainer1.Panel1.Controls.Add(this.btnFront3);
             this.splitContainer1.Panel1.Controls.Add(this.btnHowmany);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearchStudent);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
@@ -228,11 +228,102 @@ namespace MyHomeWork
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 136;
             // 
+            // btnMathnopass
+            // 
+            this.btnMathnopass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMathnopass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMathnopass.Location = new System.Drawing.Point(1153, 149);
+            this.btnMathnopass.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMathnopass.Name = "btnMathnopass";
+            this.btnMathnopass.Size = new System.Drawing.Size(302, 39);
+            this.btnMathnopass.TabIndex = 150;
+            this.btnMathnopass.Text = "找出誰數學不及格";
+            this.btnMathnopass.UseVisualStyleBackColor = false;
+            this.btnMathnopass.Click += new System.EventHandler(this.btnMathnopass_Click);
+            // 
+            // btnNobbb
+            // 
+            this.btnNobbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnNobbb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNobbb.Location = new System.Drawing.Point(843, 149);
+            this.btnNobbb.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNobbb.Name = "btnNobbb";
+            this.btnNobbb.Size = new System.Drawing.Size(302, 39);
+            this.btnNobbb.TabIndex = 150;
+            this.btnNobbb.Text = "找出\"bbb\"以外的成績";
+            this.btnNobbb.UseVisualStyleBackColor = false;
+            this.btnNobbb.Click += new System.EventHandler(this.btnNobbb_Click);
+            // 
+            // brnFindbbb
+            // 
+            this.brnFindbbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.brnFindbbb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnFindbbb.Location = new System.Drawing.Point(1153, 100);
+            this.brnFindbbb.Margin = new System.Windows.Forms.Padding(4);
+            this.brnFindbbb.Name = "brnFindbbb";
+            this.brnFindbbb.Size = new System.Drawing.Size(302, 39);
+            this.brnFindbbb.TabIndex = 150;
+            this.brnFindbbb.Text = "找出\"bbb\"的成績";
+            this.brnFindbbb.UseVisualStyleBackColor = false;
+            this.brnFindbbb.Click += new System.EventHandler(this.brnFindbbb_Click);
+            // 
+            // btnLast2
+            // 
+            this.btnLast2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLast2.Location = new System.Drawing.Point(1153, 52);
+            this.btnLast2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLast2.Name = "btnLast2";
+            this.btnLast2.Size = new System.Drawing.Size(302, 39);
+            this.btnLast2.TabIndex = 150;
+            this.btnLast2.Text = "後兩個學員成績";
+            this.btnLast2.UseVisualStyleBackColor = false;
+            this.btnLast2.Click += new System.EventHandler(this.btnLast2_Click);
+            // 
+            // btnFindStudent
+            // 
+            this.btnFindStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFindStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindStudent.Location = new System.Drawing.Point(843, 100);
+            this.btnFindStudent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFindStudent.Name = "btnFindStudent";
+            this.btnFindStudent.Size = new System.Drawing.Size(302, 39);
+            this.btnFindStudent.TabIndex = 149;
+            this.btnFindStudent.Text = "找出\"aaa\"\"bbb\"\"ccc\"";
+            this.btnFindStudent.UseVisualStyleBackColor = false;
+            this.btnFindStudent.Click += new System.EventHandler(this.btnFindStudent_Click);
+            // 
+            // btnFront3
+            // 
+            this.btnFront3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFront3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFront3.Location = new System.Drawing.Point(843, 52);
+            this.btnFront3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFront3.Name = "btnFront3";
+            this.btnFront3.Size = new System.Drawing.Size(302, 39);
+            this.btnFront3.TabIndex = 150;
+            this.btnFront3.Text = "前三個學員成績";
+            this.btnFront3.UseVisualStyleBackColor = false;
+            this.btnFront3.Click += new System.EventHandler(this.btnFront3_Click);
+            // 
+            // btnHowmany
+            // 
+            this.btnHowmany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHowmany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHowmany.Location = new System.Drawing.Point(1153, 11);
+            this.btnHowmany.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHowmany.Name = "btnHowmany";
+            this.btnHowmany.Size = new System.Drawing.Size(302, 37);
+            this.btnHowmany.TabIndex = 149;
+            this.btnHowmany.Text = "共幾個成績";
+            this.btnHowmany.UseVisualStyleBackColor = false;
+            this.btnHowmany.Click += new System.EventHandler(this.btnHowmany_Click);
+            // 
             // btnSearchStudent
             // 
             this.btnSearchStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSearchStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchStudent.Location = new System.Drawing.Point(1199, 11);
+            this.btnSearchStudent.Location = new System.Drawing.Point(843, 11);
             this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(302, 37);
@@ -240,15 +331,6 @@ namespace MyHomeWork
             this.btnSearchStudent.Text = "搜尋 班級學生成績";
             this.btnSearchStudent.UseVisualStyleBackColor = false;
             this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(955, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 15);
-            this.label6.TabIndex = 137;
-            this.label6.Text = "label6";
             // 
             // button3
             // 
@@ -267,7 +349,7 @@ namespace MyHomeWork
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(533, 220);
+            this.label3.Location = new System.Drawing.Point(457, 208);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(219, 14);
@@ -279,7 +361,7 @@ namespace MyHomeWork
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(937, 134);
+            this.label9.Location = new System.Drawing.Point(457, 171);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(27, 14);
@@ -301,7 +383,7 @@ namespace MyHomeWork
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(528, 72);
+            this.button6.Location = new System.Drawing.Point(452, 60);
             this.button6.Margin = new System.Windows.Forms.Padding(5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(372, 42);
@@ -325,7 +407,7 @@ namespace MyHomeWork
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(528, 126);
+            this.button1.Location = new System.Drawing.Point(452, 114);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(372, 42);
@@ -350,7 +432,7 @@ namespace MyHomeWork
             // 
             this.btnNxtPg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNxtPg.ForeColor = System.Drawing.Color.Black;
-            this.btnNxtPg.Location = new System.Drawing.Point(989, 249);
+            this.btnNxtPg.Location = new System.Drawing.Point(601, 278);
             this.btnNxtPg.Margin = new System.Windows.Forms.Padding(5);
             this.btnNxtPg.Name = "btnNxtPg";
             this.btnNxtPg.Size = new System.Drawing.Size(137, 42);
@@ -364,7 +446,7 @@ namespace MyHomeWork
             this.combobox.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.combobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.combobox.FormattingEnabled = true;
-            this.combobox.Location = new System.Drawing.Point(989, 130);
+            this.combobox.Location = new System.Drawing.Point(509, 167);
             this.combobox.Margin = new System.Windows.Forms.Padding(4);
             this.combobox.Name = "combobox";
             this.combobox.Size = new System.Drawing.Size(176, 21);
@@ -375,7 +457,7 @@ namespace MyHomeWork
             // 
             this.btnLstPg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLstPg.ForeColor = System.Drawing.Color.Black;
-            this.btnLstPg.Location = new System.Drawing.Point(840, 249);
+            this.btnLstPg.Location = new System.Drawing.Point(452, 278);
             this.btnLstPg.Margin = new System.Windows.Forms.Padding(5);
             this.btnLstPg.Name = "btnLstPg";
             this.btnLstPg.Size = new System.Drawing.Size(137, 42);
@@ -400,7 +482,7 @@ namespace MyHomeWork
             // 
             this.tbPiece.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbPiece.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbPiece.Location = new System.Drawing.Point(640, 253);
+            this.tbPiece.Location = new System.Drawing.Point(564, 241);
             this.tbPiece.Margin = new System.Windows.Forms.Padding(5);
             this.tbPiece.Name = "tbPiece";
             this.tbPiece.Size = new System.Drawing.Size(180, 23);
@@ -412,7 +494,7 @@ namespace MyHomeWork
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(521, 257);
+            this.label1.Location = new System.Drawing.Point(445, 245);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 14);
@@ -424,7 +506,7 @@ namespace MyHomeWork
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(524, 34);
+            this.label5.Location = new System.Drawing.Point(448, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(207, 14);
@@ -468,96 +550,18 @@ namespace MyHomeWork
             // 
             this.productsTableAdapter1.ClearBeforeFill = true;
             // 
-            // btnHowmany
+            // button37
             // 
-            this.btnHowmany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnHowmany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHowmany.Location = new System.Drawing.Point(1199, 50);
-            this.btnHowmany.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHowmany.Name = "btnHowmany";
-            this.btnHowmany.Size = new System.Drawing.Size(302, 39);
-            this.btnHowmany.TabIndex = 149;
-            this.btnHowmany.Text = "共幾個成績";
-            this.btnHowmany.UseVisualStyleBackColor = false;
-            this.btnHowmany.Click += new System.EventHandler(this.btnHowmany_Click);
-            // 
-            // btnFront3
-            // 
-            this.btnFront3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnFront3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFront3.Location = new System.Drawing.Point(1199, 89);
-            this.btnFront3.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFront3.Name = "btnFront3";
-            this.btnFront3.Size = new System.Drawing.Size(302, 39);
-            this.btnFront3.TabIndex = 150;
-            this.btnFront3.Text = "前三個學員成績";
-            this.btnFront3.UseVisualStyleBackColor = false;
-            this.btnFront3.Click += new System.EventHandler(this.btnFront3_Click);
-            // 
-            // btnLast2
-            // 
-            this.btnLast2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnLast2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLast2.Location = new System.Drawing.Point(1199, 128);
-            this.btnLast2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLast2.Name = "btnLast2";
-            this.btnLast2.Size = new System.Drawing.Size(302, 39);
-            this.btnLast2.TabIndex = 150;
-            this.btnLast2.Text = "後兩個學員成績";
-            this.btnLast2.UseVisualStyleBackColor = false;
-            this.btnLast2.Click += new System.EventHandler(this.btnLast2_Click);
-            // 
-            // btnFindStudent
-            // 
-            this.btnFindStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnFindStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindStudent.Location = new System.Drawing.Point(1199, 167);
-            this.btnFindStudent.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFindStudent.Name = "btnFindStudent";
-            this.btnFindStudent.Size = new System.Drawing.Size(302, 39);
-            this.btnFindStudent.TabIndex = 149;
-            this.btnFindStudent.Text = "找出\"aaa\"\"bbb\"\"ccc\"";
-            this.btnFindStudent.UseVisualStyleBackColor = false;
-            this.btnFindStudent.Click += new System.EventHandler(this.btnFindStudent_Click);
-            // 
-            // brnFindbbb
-            // 
-            this.brnFindbbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.brnFindbbb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnFindbbb.Location = new System.Drawing.Point(1199, 206);
-            this.brnFindbbb.Margin = new System.Windows.Forms.Padding(4);
-            this.brnFindbbb.Name = "brnFindbbb";
-            this.brnFindbbb.Size = new System.Drawing.Size(302, 39);
-            this.brnFindbbb.TabIndex = 150;
-            this.brnFindbbb.Text = "找出\"bbb\"的成績";
-            this.brnFindbbb.UseVisualStyleBackColor = false;
-            this.brnFindbbb.Click += new System.EventHandler(this.brnFindbbb_Click);
-            // 
-            // btnNobbb
-            // 
-            this.btnNobbb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnNobbb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNobbb.Location = new System.Drawing.Point(1199, 245);
-            this.btnNobbb.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNobbb.Name = "btnNobbb";
-            this.btnNobbb.Size = new System.Drawing.Size(302, 39);
-            this.btnNobbb.TabIndex = 150;
-            this.btnNobbb.Text = "找出\"bbb\"以外的成績";
-            this.btnNobbb.UseVisualStyleBackColor = false;
-            this.btnNobbb.Click += new System.EventHandler(this.btnNobbb_Click);
-            // 
-            // btnMathnopass
-            // 
-            this.btnMathnopass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnMathnopass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMathnopass.Location = new System.Drawing.Point(1199, 284);
-            this.btnMathnopass.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMathnopass.Name = "btnMathnopass";
-            this.btnMathnopass.Size = new System.Drawing.Size(302, 39);
-            this.btnMathnopass.TabIndex = 150;
-            this.btnMathnopass.Text = "找出誰數學不及格";
-            this.btnMathnopass.UseVisualStyleBackColor = false;
-            this.btnMathnopass.Click += new System.EventHandler(this.btnMathnopass_Click);
+            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button37.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button37.Location = new System.Drawing.Point(943, 196);
+            this.button37.Margin = new System.Windows.Forms.Padding(4);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(375, 39);
+            this.button37.TabIndex = 151;
+            this.button37.Text = "每個學生個人成績";
+            this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // Frm作業_1
             // 
@@ -620,7 +624,6 @@ namespace MyHomeWork
         private LinqLabs.NWDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter1;
         private LinqLabs.NWDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private LinqLabs.NWDataSetTableAdapters.Order_DetailsTableAdapter order_DetailsTableAdapter1;
-        private System.Windows.Forms.Label label6;
         private LinqLabs.NWDataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
         private System.Windows.Forms.Button btnSearchStudent;
         private System.Windows.Forms.Button btnMathnopass;
@@ -630,5 +633,6 @@ namespace MyHomeWork
         private System.Windows.Forms.Button btnFindStudent;
         private System.Windows.Forms.Button btnFront3;
         private System.Windows.Forms.Button btnHowmany;
+        private System.Windows.Forms.Button button37;
     }
 }

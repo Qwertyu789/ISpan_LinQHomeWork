@@ -68,6 +68,7 @@ namespace MyHomeWork
                 {
                     if (s.IsNull(c))
                     {
+                        //#todo0 :
                         s.Delete();
                         break;
                     }
@@ -91,7 +92,7 @@ namespace MyHomeWork
         //翻頁
         void page()
         {
-
+            //todo#1 : 尚未修改bug
             this.dataGridView1.Columns.Clear();
             bool isInt = int.TryParse(tbPiece.Text, out int Takepage);
             if (!isInt)
@@ -100,7 +101,7 @@ namespace MyHomeWork
                 return;
             }
             int Skippage = (CurrentPage - 1) * Takepage;
-            //做錯做成ORDERS了
+            #region 做成ORDERS了            
             //var orders = from ods in this.nwDataSet1.Orders.Skip(Skippage).Take(Takepage)
             //                 //where ods.OrderDate.Year == Convert.ToInt32(combobox.Text)
             //             select ods;
@@ -110,6 +111,7 @@ namespace MyHomeWork
             //                    on odt.OrderID equals ods.OrderID
             //                    select odt;
             //this.dataGridView2.DataSource = order_details.ToList();
+            #endregion
             var product = from pro in this.nwDataSet1.Products.Skip(Skippage).Take(Takepage)
                           select pro;
             this.dataGridView2.DataSource = product.ToList();
@@ -317,5 +319,18 @@ namespace MyHomeWork
         // 找出 'aaa', 'bbb' 'ccc' 學員 國文數學兩科 科目成績  |		
         //個人 所有科的  sum, min, max, avg
         #endregion
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = students_scores.Where(i => i.Name == "aaa" || i.Name == "bbb" || i.Name == "ccc").Select(i => new { i.Name, i.Chi, i.Math }).ToList();
+            this.dataGridView2.DataSource = students_scores.Select(i => new
+            {
+                i.Name,
+                Sum = new int[] { i.Math, i.Eng, i.Chi }.Sum(),
+                Min = new int[] { i.Math, i.Eng, i.Chi }.Min(),
+                Max = new int[] { i.Math, i.Eng, i.Chi }.Max(),
+                Avg = (new int[] { i.Math, i.Eng, i.Chi }.Average()).ToString("0.00")
+            }).ToList();
+        }
     }
 }
