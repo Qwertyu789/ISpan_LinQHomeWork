@@ -12,7 +12,7 @@ namespace LinqLabs
 {
     public partial class Frm作業_4 : Form
     {
-        NorthwindEntities dbConnect = new NorthwindEntities();
+        NorthwindEntities1 dbConnect = new NorthwindEntities1();
         public Frm作業_4()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace LinqLabs
             dataGridView1.Columns.Clear();
             dataGridView2.Columns.Clear();
             treeView1.Nodes.Clear();
+            chart1.Series.Clear();
         }
         private string _fileLengh(int n)
         {
@@ -41,24 +42,29 @@ namespace LinqLabs
             string s1 = "";
             string s2 = "";
             string s3 = "";
-
+            string s = "";
             int[] practice = { 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+            for(int i = 0; i < practice.Length; i++)
+            {
+                s += "["+practice[i]+"]" + " ";
+            }
+            
             for (int idx = 0; idx < practice.Length; idx++)
             {
-                if (_MyKey(idx) == "小")
+                if (_MyKey(practice[idx]) == "小")
                 {
-                    s1 += idx +" ";
+                    s1 += "["+ practice[idx] + "]" + " ";
                 }
-                else if (_MyKey(idx) == "中")
+                else if (_MyKey(practice[idx]) == "中")
                 {
-                    s2 += idx + " "; ;
+                    s2 += "[" + practice[idx] + "]" + " "; ;
                 }
                 else
                 {
-                    s3 += idx + " "; ;
+                    s3 += "[" + practice[idx] + "]" + " "; ;
                 }
             }
-            MessageBox.Show("小：" + s1 + "\r\n中：" + s2 + "\r\n大：" + s3);
+            MessageBox.Show("全部："+s+"\r\n小：" + s1 + "\r\n中：" + s2 + "\r\n大：" + s3);
         }
 
         private void button38_Click(object sender, EventArgs e)
@@ -173,19 +179,96 @@ namespace LinqLabs
             //{
             //    res += i.total;
             //}
-            //MessageBox.Show(res.ToString("0.00"));
+            //MessageBox.Show(res.ToString("0.00")+"元");
+
             var q = from p in dbConnect.Order_Details
                     select p;
-            MessageBox.Show($"{q.Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)):n2}");
+            MessageBox.Show($"{q.Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)):n2}元");
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var best5seller = from s in dbConnect.Orders
-                              group s by s.EmployeeID into g
-                              select new { Seller = g.Key, Count = g.Count()};
-            dataGridView1.DataSource = best5seller.OrderByDescending(i => i.Count).Take(5).ToList();
+            _Refresh();
+            var best5seller = from s in dbConnect.Order_Details
+                              group s by s.Order.EmployeeID into g
+                              select new { Seller = g.Key,Total = g.Sum(i=>(double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)) };
+            dataGridView1.DataSource = best5seller.OrderByDescending(i=>i.Total).Take(5).ToList();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            _Refresh();
+            var top5 = from p in dbConnect.Products
+                       orderby p.UnitPrice descending
+                       select p;
+            dataGridView1.DataSource = top5.Take(5).Select(i=>new {Productname= i.ProductName,Price=i.UnitPrice,Category = i.Category.CategoryName}).ToList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bool res = (dbConnect.Products).All(i => i.UnitPrice > 300);
+            MessageBox.Show(res.ToString());
+            
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            _Refresh();
+            chart1.Series.Add("0");
+            chart1.Series.Add("1");
+            chart1.Series.Add("2");
+            var selldetail = from sells in dbConnect.Order_Details.AsEnumerable()
+                             group sells by sells.Product.Category.CategoryName into g
+                             select new
+                             {
+                                 Category = g.Key,
+                                 YearPrice1996 = g.Where(i => i.Order.OrderDate.Value.Year == 1996).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)),
+                                 YearPrice1997 = g.Where(i => i.Order.OrderDate.Value.Year == 1997).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)),
+                                 YearPrice1998 = g.Where(i => i.Order.OrderDate.Value.Year == 1998).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount))
+                             };
+
+            chart1.DataSource = selldetail.ToList();
+            chart1.Series[0].Name = "1996";
+            chart1.Series[0].XValueMember = "Category";
+            chart1.Series[0].YValueMembers = "YearPrice1996";
+
+            chart1.DataSource = selldetail.ToList();
+            chart1.Series[1].Name = "1997";
+            chart1.Series[1].XValueMember = "Category";
+            chart1.Series[1].YValueMembers = "YearPrice1997";
+            
+            chart1.DataSource = selldetail.ToList();
+            chart1.Series[2].Name = "1998";
+            chart1.Series[2].XValueMember = "Category";
+            chart1.Series[2].YValueMembers = "YearPrice1998";
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            _Refresh();
+            chart1.Series.Add("0");
+            chart1.Series.Add("1");
+            var yoy = from y in dbConnect.Order_Details
+                      group y by y.Product.Category.CategoryName into g
+                      select new
+                      {
+                          Category = g.Key,
+                          Sell1 = Math.Round((g.Where(i => i.Order.OrderDate.Value.Year == 1997).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)) - g.Where(i => i.Order.OrderDate.Value.Year == 1996).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount))) / g.Where(i => i.Order.OrderDate.Value.Year == 1996).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)), 2),
+                          Sell2 = Math.Round((g.Where(i => i.Order.OrderDate.Value.Year == 1998).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)) - g.Where(i => i.Order.OrderDate.Value.Year == 1997).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount))) / g.Where(i => i.Order.OrderDate.Value.Year == 1996).Sum(i => (double)(i.UnitPrice) * i.Quantity * (1 - i.Discount)), 2)
+                      };
+            this.dataGridView1.DataSource = yoy.ToList();
+            chart1.DataSource = yoy.ToList();
+            chart1.Series[0].XValueMember = "Category";
+            chart1.Series[0].YValueMembers = "Sell1";
+            chart1.Series[0].Name = "1996/1997";
+            chart1.Series[0].Color = Color.Green;
+
+            chart1.Series[1].XValueMember = "Category";
+            chart1.Series[1].YValueMembers = "Sell2";
+            chart1.Series[1].Name = "1997/1998";
+            chart1.Series[1].Color = Color.Blue;
         }
     }
 }

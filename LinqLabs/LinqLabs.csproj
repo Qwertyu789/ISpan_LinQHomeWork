@@ -60,32 +60,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AWDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Categories.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Category.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
+    <Compile Include="Customer.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthWindModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>NorthWindModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="NorthWindModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NorthWindModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Orders.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Order.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Order_Details.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Products.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Product.cs">
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="作業\Frm作業_4.cs">
       <SubType>Form</SubType>
@@ -182,19 +188,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>NorthWindModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthWindModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="NorthWindModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthWindModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NorthWindModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthWindModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
