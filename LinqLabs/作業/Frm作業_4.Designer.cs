@@ -93,6 +93,7 @@ namespace LinqLabs
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button34);
             this.panel1.Controls.Add(this.button3);
@@ -113,7 +114,7 @@ namespace LinqLabs
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(706, 758);
+            this.panel1.Size = new System.Drawing.Size(706, 938);
             this.panel1.TabIndex = 1;
             // 
             // button34
@@ -147,6 +148,7 @@ namespace LinqLabs
             this.button10.TabIndex = 133;
             this.button10.Text = " Orders -  Group by 年 / 月";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label4
             // 
@@ -169,6 +171,7 @@ namespace LinqLabs
             this.button4.TabIndex = 85;
             this.button4.Text = "int[]  分三群 - No LINQ";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button9
             // 
@@ -191,6 +194,7 @@ namespace LinqLabs
             this.button2.TabIndex = 129;
             this.button2.Text = "總銷售金額";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -224,6 +228,7 @@ namespace LinqLabs
             this.button6.TabIndex = 93;
             this.button6.Text = "  依 年 分組檔案 (大=>小)";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
             // 
@@ -236,6 +241,7 @@ namespace LinqLabs
             this.button8.TabIndex = 94;
             this.button8.Text = "NW Products 低中高 價產品 ";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button38
             // 
@@ -248,6 +254,7 @@ namespace LinqLabs
             this.button38.TabIndex = 95;
             this.button38.Text = "依 檔案大小 分組檔案 (大=>小)";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button1
             // 
@@ -259,6 +266,7 @@ namespace LinqLabs
             this.button1.TabIndex = 125;
             this.button1.Text = "銷售最好的top 5業務員";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button15
             // 
@@ -270,6 +278,7 @@ namespace LinqLabs
             this.button15.TabIndex = 121;
             this.button15.Text = " Orders -  Group by 年";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -284,7 +293,7 @@ namespace LinqLabs
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1205, 768);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1241, 948);
             this.tableLayoutPanel3.TabIndex = 135;
             // 
             // tableLayoutPanel4
@@ -301,7 +310,7 @@ namespace LinqLabs
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(479, 758);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(515, 938);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // splitContainer2
@@ -319,8 +328,8 @@ namespace LinqLabs
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainer2.Size = new System.Drawing.Size(469, 242);
-            this.splitContainer2.SplitterDistance = 196;
+            this.splitContainer2.Size = new System.Drawing.Size(505, 302);
+            this.splitContainer2.SplitterDistance = 211;
             this.splitContainer2.SplitterWidth = 6;
             this.splitContainer2.TabIndex = 131;
             // 
@@ -337,7 +346,7 @@ namespace LinqLabs
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(192, 238);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(207, 298);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblMaster
@@ -349,7 +358,7 @@ namespace LinqLabs
             this.lblMaster.Location = new System.Drawing.Point(5, 0);
             this.lblMaster.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMaster.Name = "lblMaster";
-            this.lblMaster.Size = new System.Drawing.Size(182, 49);
+            this.lblMaster.Size = new System.Drawing.Size(197, 49);
             this.lblMaster.TabIndex = 101;
             this.lblMaster.Text = "Master";
             // 
@@ -362,7 +371,7 @@ namespace LinqLabs
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(180, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(195, 237);
             this.dataGridView1.TabIndex = 71;
             // 
             // tableLayoutPanel2
@@ -378,7 +387,7 @@ namespace LinqLabs
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(263, 238);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(284, 298);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblDetails
@@ -390,7 +399,7 @@ namespace LinqLabs
             this.lblDetails.Location = new System.Drawing.Point(5, 0);
             this.lblDetails.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(253, 49);
+            this.lblDetails.Size = new System.Drawing.Size(274, 49);
             this.lblDetails.TabIndex = 102;
             this.lblDetails.Text = "Details";
             // 
@@ -403,23 +412,25 @@ namespace LinqLabs
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(251, 177);
+            this.dataGridView2.Size = new System.Drawing.Size(272, 237);
             this.dataGridView2.TabIndex = 100;
             // 
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(5, 257);
+            this.treeView1.Location = new System.Drawing.Point(5, 317);
             this.treeView1.Margin = new System.Windows.Forms.Padding(5);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(469, 242);
+            this.treeView1.Size = new System.Drawing.Size(505, 302);
             this.treeView1.TabIndex = 130;
             // 
             // Frm作業_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 768);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1241, 948);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Name = "Frm作業_4";
             this.Text = "Frm作業_4";

@@ -54,7 +54,7 @@ namespace LinqLabs
             cbYear.Text = (comboYear.ToArray()[(comboYear.Count()) - 1]).ToString();
             cbSeason.Text = cbSeason.Items[0].ToString();
         }
-        //============================ method
+        //============================ 
         private void button12_Click(object sender, EventArgs e)
         {
             this.dataGridView2.DataSource = awDataSet1.ProductPhoto.ToList();
