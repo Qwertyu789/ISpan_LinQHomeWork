@@ -35,9 +35,9 @@ namespace Starter
             //Application.Run(new FrmLinq_To_Entity());
 
             //Application.Run(new Frm作業_1());
-            //Application.Run(new LinqLabs.Frm作業_2());
+            Application.Run(new LinqLabs.Frm作業_2());
             //Application.Run(new LinqLabs.Frm作業_3());
-            Application.Run(new LinqLabs.Frm作業_4());
+            //Application.Run(new LinqLabs.Frm作業_4());
         }
     }
 }
